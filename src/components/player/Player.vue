@@ -10,6 +10,9 @@
       ref="canvas"
       class="player__canvas"
     />
+    <div v-if="error" class="player__error">
+      {{ error }}
+    </div>
     <button
       class="btn player__control"
       @click="togglePlay"
@@ -27,6 +30,7 @@ const constraints = {
 export default {
   data () {
     return {
+      error: undefined,
       maxWidth: 800,
       maxHeight: 800,
       isPlaying: true,
@@ -62,10 +66,12 @@ export default {
     handleSuccess (stream) {
       const video = this.$refs.video
       this.stream = stream
+      this.error = undefined
       video.srcObject = stream
     },
     handleError (error) {
       console.log('navigator.MediaDevices.getUserMedia error: ', error.message, error.name)
+      this.error = error.message
     },
     init () {
       const { width, height } = this.getDimension()

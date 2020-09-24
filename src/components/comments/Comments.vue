@@ -31,7 +31,7 @@
       </div>
       <div class="pagination">
         <button
-          class="pagination__btn"
+          class="btn pagination__btn"
           :disabled="comments.length >= allComments.length"
           @click="loadMore"
         >
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div v-else-if="allComments && allComments.length === 0">
-      No comments found
+      ...No comments found
     </div>
   </div>
 </template>
