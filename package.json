@@ -1,0 +1,44 @@
+{
+  "name": "teachee",
+  "version": "1.0.0",
+  "description": "Test task for teachee",
+  "main": "index.js",
+  "author": "taitu",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "html-webpack-plugin": "^4.5.0",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "vue-loader": "^15.9.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --https --host=0.0.0.0 --config webpack.config.dev.js",
+    "lint": "eslint --ext .js,.vue src"
+  }
+}
